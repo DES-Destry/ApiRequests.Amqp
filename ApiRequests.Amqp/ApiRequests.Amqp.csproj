@@ -1,0 +1,46 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <ImplicitUsings>disable</ImplicitUsings>
+        <Nullable>disable</Nullable>
+        <Title>Basic classes for AMQP requests</Title>
+        <Authors>Destry.Unimaster</Authors>
+        <Description>Base classes and interfaces to build requests to external APIs faster via AMQP.</Description>
+        <Copyright>2023</Copyright>
+        <PackageLicenseUrl>MIT</PackageLicenseUrl>
+        <PackageIcon>api-interface.png</PackageIcon>
+        <RepositoryUrl>https://github.com/DES-Destry/ApiRequests.Amqp.git</RepositoryUrl>
+        <RepositoryType>GitHub</RepositoryType>
+        <PackageTags>API Requests AMQP RabbitMQ Queues Exhanges</PackageTags>
+        <PackageReleaseNotes>- Add publish methods to send messages and get their reply message.</PackageReleaseNotes>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <FileVersion>1.2.0.0</FileVersion>
+        <TargetFrameworks>net472;net48;net6.0;net7.0;netcoreapp3.1;netstandard2.0;netstandard2.1</TargetFrameworks>
+        <Version>1.2.0</Version>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+        <DocumentationFile>bin\Release\ApiRequests.Amqp.xml</DocumentationFile>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <None Include="api-interface.png" Pack="true" PackagePath="" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="RabbitMQ.Client" Version="6.5.0" />
+    </ItemGroup>
+
+
+    <ItemGroup Condition=" '$(Configuration)' == 'Debug' ">
+<!--        Download projects and add references for more detailed debugging-->
+<!--        <ProjectReference Include="..\ApiRequests\ApiRequests.csproj"/>-->
+        <PackageReference Include="ApiRequests" Version="1.0.5" />
+    </ItemGroup>
+
+    <ItemGroup Condition=" '$(Configuration)' == 'Release' ">
+        <PackageReference Include="ApiRequests" Version="1.0.5" />
+    </ItemGroup>
+
+</Project>
