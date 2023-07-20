@@ -1,6 +1,6 @@
 {
   "name": "api-requests.amqp",
-  "version": "0.0.0-development",
+  "version": "1.2.1",
   "repository": "git@github.com:DES-Destry/ApiRequests.Amqp.git",
   "author": "Andrey Kirik <dev.andrey.kirik@gmail.com>",
   "license": "MIT",
